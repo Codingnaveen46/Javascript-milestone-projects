@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add List Items</title>
+</head>
+<body>
+	<h2>What You'll Learn</h2>
+	<ul id="learnList"></ul>
+	<button id="addButton">Add Item</button>
+
+	<script>
+		// pre-existing array of list items
+		const learnItems = [
+			"JavaScript fundamentals",
+			"Working with arrays",
+			"DOM manipulation",
+			"Event handling",
+            "Web APIs",
+    "jQuery",
+    "Node.js",
+    "React",
+    "Angular",
+    "Vue",
+    "Angular 2",
+    "Angular 4",
+    "Angular 5",
+    "Angular 6",
+    "Angular 7",
+    "Angular 8",
+    "Angular 9",
+    "Angular 10",
+    "Angular 11",
+            
+		];
+
+		// initialize variables
+		let currentIndex = 0;
+		const list = document.getElementById("learnList");
+		const addButton = document.getElementById("addButton");
+
+		// add item function
+		function addItem() {
+			if (currentIndex < learnItems.length) {
+				const newItem = document.createElement("li");
+				newItem.innerText = learnItems[currentIndex];
+				list.appendChild(newItem);
+				currentIndex++;
+			} else {
+				alert("All items have been added!");
+			}
+		}
+
+		// attach event listener to button
+		addButton.addEventListener("click", addItem);
+	</script>
+</body>
+</html>

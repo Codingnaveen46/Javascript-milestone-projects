@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Highlight Words in Paragraph</title>
+	<style>
+		.highlight {
+			background-color: rgb(85, 255, 0);
+		}
+	</style>
+</head>
+<body>
+	<p id="my-paragraph">This is a paragraph with some words that are more than 8 characters long. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero corrupti dicta quo iusto aliquam, doloribus quasi odio consequuntur nostrum similique consequatur natus sed ratione suscipit voluptate. Cum obcaecati, non autem nulla vel facere quasi placeat adipisci laboriosam. Perspiciatis eius delectus adipisci aperiam, ullam placeat nisi impedit, maxime enim quos consequuntur provident magni minima ratione temporibus veniam? Rerum modi tempore incidunt corporis provident, pariatur nostrum exercitationem ea quia eum suscipit neque quasi officiis. Doloribus minima ipsum quam ratione voluptatum! Animi praesentium dolorem ea error illum officia modi blanditiis accusamus aliquam repudiandae architecto earum perferendis aut iure, reprehenderit placeat veniam autem obcaecati? Unde rerum sunt ad. Iste dolorem minus modi dolore aliquam doloribus magni laudantium suscipit animi, assumenda unde laboriosam similique quae beatae delectus, nihil cumque et eos fugiat sapiente nam debitis quas quaerat officia? Officia, voluptates laboriosam veritatis fugit quaerat molestias ad, accusamus aperiam enim assumenda eaque. Tempore, ab explicabo accusantium placeat minus enim! Nihil veniam obcaecati iure neque placeat? Perspiciatis officia dolorum rem ex, tenetur laudantium dolore dignissimos. Voluptate fugiat neque a perferendis illo necessitatibus esse architecto voluptas, harum repellat nemo earum ipsa at, unde libero laboriosam eveniet ad deleniti recusandae alias quae. Pariatur, nesciunt voluptates? Amet, eum exercitationem saepe, a inventore quibusdam nulla aperiam explicabo quis accusantium reiciendis assumenda, fugit temporibus ab vel? Deserunt, eaque? Ea, laudantium asperiores. Sit placeat maiores iure, fugiat molestias facere odit eligendi, fuga ad obcaecati veniam labore quae alias dolores blanditiis, possimus modi eaque ducimus aspernatur culpa? Nulla, itaque? Suscipit ipsum culpa maiores, et adipisci dignissimos delectus aperiam voluptate repellat! Consequuntur, optio? Voluptatum odio tenetur, provident maxime esse voluptatibus dolores ipsum culpa sequi, vitae, ex accusantium labore suscipit eveniet quasi fuga amet cupiditate quod iste animi molestias quis asperiores iusto. Quaerat autem harum ut? Corporis, vel unde delectus doloribus labore voluptatum error earum aut iste, sequi facilis! Enim maiores aspernatur mollitia rem culpa, minus cupiditate provident reprehenderit at facilis aperiam itaque maxime quos perspiciatis officia ipsa adipisci delectus iure obcaecati nesciunt consequatur tempora. Consequuntur molestias ad perferendis natus nihil maxime doloribus at enim sed praesentium hic, soluta, eaque omnis excepturi officiis suscipit pariatur architecto veniam? Eligendi corporis voluptates, exercitationem rem debitis non esse, nisi totam minus fuga nesciunt! Ab mollitia culpa natus veniam cumque voluptas! Quos, asperiores ad animi nostrum debitis labore optio, totam natus cum modi voluptates placeat quasi perferendis. Adipisci distinctio fugiat quas explicabo. Quae soluta illum, iste officia repellendus est vero excepturi et. Blanditiis rem ipsa doloribus, consequuntur eos vel ipsum sint qui at voluptate ex alias excepturi vitae corporis dolores eligendi odio odit aliquid repudiandae eveniet voluptas a. Ab culpa cumque molestiae atque iure doloribus, obcaecati cupiditate explicabo saepe vitae nostrum nisi? Numquam pariatur blanditiis rerum, architecto quasi aspernatur vero porro? Sequi modi temporibus ipsa, nostrum, at voluptate architecto molestiae nemo eos cumque, expedita nihil saepe. In ratione suscipit, impedit ullam magnam nulla sequi dolor iure consequuntur laboriosam itaque minima eum, magni ex quas blanditiis odio! Quas libero ratione, labore reiciendis suscipit sequi dolores iste eius perferendis dolorem saepe tempore!</p>
+
+	<script>
+		// Get the paragraph element
+		const paragraph = document.getElementById("my-paragraph");
+
+		// Split the paragraph into an array of words
+		const words = paragraph.textContent.split(" ");
+
+		// Loop through each word in the array
+		for (let i = 0; i < words.length; i++) {
+			// Check if the word has more than 8 characters
+			if (words[i].length > 8) {
+				// Wrap the word in a span element with a highlight class
+				words[i] = "<span class='highlight'>" + words[i] + "</span>";
+			}
+		}
+
+		// Join the array of words back into a string and set it as the new content of the paragraph element
+		paragraph.innerHTML = words.join(" ");
+	</script>
+</body>
+</html>
